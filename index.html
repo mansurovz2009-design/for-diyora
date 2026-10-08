@@ -24,7 +24,6 @@
       position: relative;
     }
 
-    /* Анимированная паутина и атмосфера на фоне */
     body::before {
       content: "";
       position: fixed;
@@ -47,7 +46,6 @@
       max-width: 440px;
     }
 
-    /* Заголовок сверху */
     .header {
       text-align: center;
       margin-bottom: 25px;
@@ -81,7 +79,6 @@
       text-shadow: 0 0 15px rgba(226, 28, 38, 0.8);
     }
 
-    /* Сетка 4 блоков (Options) */
     .options-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -121,7 +118,6 @@
       color: #ffffff;
     }
 
-    /* Модальные окна (Кастомные всплывающие окна) */
     .modal {
       display: none;
       position: fixed;
@@ -169,7 +165,6 @@
 
     .close-btn:hover { color: #ffffff; }
 
-    /* Вкладка 1: Подарочек */
     .bouquet-img {
       font-size: 70px;
       margin-bottom: 15px;
@@ -200,7 +195,6 @@
       gap: 10px;
     }
 
-    /* Вкладка 2: Музыка */
     .music-box {
       margin-top: 15px;
       background: rgba(4, 134, 255, 0.1);
@@ -224,7 +218,6 @@
       border-radius: 30px;
     }
 
-    /* Вкладка 3: Письмо в конверте */
     .envelope-wrapper {
       cursor: pointer;
       margin: 20px 0;
@@ -246,11 +239,10 @@
       line-height: 1.7;
       color: #f1f1f1;
       margin-top: 15px;
-      max-height: 250px;
+      max-height: 320px;
       overflow-y: auto;
     }
 
-    /* Вкладка 4: Секрет (Пароль и предложение) */
     .pass-input {
       width: 100%;
       padding: 12px;
@@ -325,7 +317,6 @@
       cursor: pointer;
     }
 
-    /* Сообщение после нажатия "Да" */
     .success-box {
       display: none;
       background: rgba(4, 134, 255, 0.15);
@@ -352,14 +343,12 @@
 <body>
 
   <div class="container">
-    <!-- Шапка -->
     <div class="header">
       <div class="spidey-badge">🕷️🕸️</div>
       <div class="header-sub">Особенное место</div>
       <h1>Моей любимой ❤️</h1>
     </div>
 
-    <!-- 4 Главные кнопки (Options) -->
     <div class="options-grid">
       <div class="option-card" onclick="openModal('giftModal')">
         <div class="icon">🎁</div>
@@ -383,7 +372,7 @@
     </div>
   </div>
 
-  <!-- 1. Модальное окно: Подарочек -->
+  <!-- 1. Подарочек -->
   <div class="modal" id="giftModal">
     <div class="modal-content">
       <button class="close-btn" onclick="closeModal('giftModal')">&times;</button>
@@ -402,7 +391,7 @@
     </div>
   </div>
 
-  <!-- 2. Модальное окно: Музыка -->
+  <!-- 2. Музыка -->
   <div class="modal" id="musicModal">
     <div class="modal-content">
       <button class="close-btn" onclick="closeModal('musicModal')">&times;</button>
@@ -416,7 +405,6 @@
         </div>
         <p style="color: #bbb; font-size: 13px; margin-bottom: 15px;">Включай песню и просто подумай обо мне 🕷️</p>
         
-        <!-- Аудио плеер со сгенерированной музыкой (Heat Waves) -->
         <audio class="audio-player" controls autoplay loop>
           <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3" type="audio/mpeg">
           Твой браузер не поддерживает аудиоплеер.
@@ -425,7 +413,7 @@
     </div>
   </div>
 
-  <!-- 3. Модальное окно: Письмо -->
+  <!-- 3. Письмо (Обновленное) -->
   <div class="modal" id="letterModal">
     <div class="modal-content">
       <button class="close-btn" onclick="closeModal('letterModal')">&times;</button>
@@ -436,8 +424,11 @@
       </div>
 
       <div id="letterView" class="letter-text">
-        <h3 style="color: #ff4757; text-align: center; margin-bottom: 10px;">Моей Диере ❤️</h3>
-        <p>Привет, моя хорошая!</p><br>
+        <h3 style="color: #ff4757; text-align: center; margin-bottom: 12px;">Моей Диере ❤️</h3>
+        <p>Привет, моя дорогая! ❤️</p><br>
+        <p>Хочу сказать тебе кое-что очень важное. Я тебя искренне люблю, ценю и безмерно уважаю. Ты — первая девушка, которую я полюбил так сильно, и вообще первая, к кому у меня возникли такие глубокие чувства.</p><br>
+        <p>Я знаю, о чём ты переживаешь. Ты думаешь, что наши семьи слишком разные, что мы религиозная семья, а ты другая, и поэтому мы не подходим друг другу. И что будто бы мне нравятся только девушки в хиджабе...(но эта не отрицает факт того что я хочу чтобы жена была покрыта 🙃) Поверь мне, это совсем не так! Для меня важна именно ты — такая, какая ты есть, прекрасная и красивая. Мои чувства к тебе настоящие и искренние.</p><br>
+        <p>Да, нам, возможно, ещё рано слишком сильно тревожиться о будущем и семейных вопросах, ведь у нас всё впереди. Но я просто хочу, чтобы ты знала и помнила: я действительно люблю тебя!</p><br>
         <p>Даже у Человека-паука есть тот самый единственный человек, ради которого хочется ставить всю паутину на паузу. Для меня этот человек — ты.</p><br>
         <p>Я хочу лишний раз напомнить тебе, как сильно я тебя ценю. Спасибо за то, какая ты есть — милая, скромная, умная и невероятно красивая. Каждая твоя улыбка делает мой день ярче!</p><br>
         <p style="text-align: right; font-weight: bold; color: #0486ff;">Твой Человек-паук 🕷️</p>
@@ -445,12 +436,11 @@
     </div>
   </div>
 
-  <!-- 4. Модальное окно: Secret (Пароль) -->
+  <!-- 4. Secret -->
   <div class="modal" id="secretModal">
     <div class="modal-content">
       <button class="close-btn" onclick="closeModal('secretModal')">&times;</button>
       
-      <!-- Форма ввода пароля -->
       <div id="passBlock">
         <div style="font-size: 50px; margin-bottom: 10px;">🔐</div>
         <h2 style="color: #ffffff; margin-bottom: 10px;">Секретная зона</h2>
@@ -462,7 +452,6 @@
         <p id="errorMsg" style="color: #ff4757; font-size: 13px; margin-top: 10px; display: none;">Неверный пароль! Попробуй еще раз 😉</p>
       </div>
 
-      <!-- Скрытый контент после пароля -->
       <div id="secretBlock" class="secret-content">
         <div style="font-size: 50px;">🕷️❤️</div>
         <div class="question-title">Хочешь встретиться со мной?</div>
@@ -472,7 +461,6 @@
           <button class="btn-no" id="noBtn" onmouseover="moveButton()" onclick="moveButton()" ontouchstart="moveButton()">Нет</button>
         </div>
 
-        <!-- Сообщение после ДА -->
         <div class="success-box" id="successBox">
           <h2>Урааа! Я знал, что ты скажешь ДА! 🎉🕷️</h2>
           <p>Тогда напиши мне прямо сейчас и выбери время, когда тебе удобно встречаться! ❤️</p>
@@ -483,23 +471,19 @@
   </div>
 
   <script>
-    // Открытие модальных окон
     function openModal(modalId) {
       document.getElementById(modalId).style.display = 'flex';
     }
 
-    // Закрытие модальных окон
     function closeModal(modalId) {
       document.getElementById(modalId).style.display = 'none';
     }
 
-    // Открытие конверта с письмом
     function openLetter() {
       document.getElementById('envelopeView').style.display = 'none';
       document.getElementById('letterView').style.display = 'block';
     }
 
-    // Проверка пароля (2010)
     function checkPassword() {
       const input = document.getElementById('passInput').value;
       if (input === '2010') {
@@ -510,7 +494,6 @@
       }
     }
 
-    // Убегающая кнопка "Нет"
     function moveButton() {
       const btn = document.getElementById('noBtn');
       const padding = 20;
@@ -525,7 +508,6 @@
       btn.style.top = randomY + 'px';
     }
 
-    // Нажатие на "ДА"
     function sayYes() {
       document.getElementById('btnsContainer').style.display = 'none';
       document.getElementById('successBox').style.display = 'block';
@@ -533,5 +515,4 @@
   </script>
 
 </body>
-  </html>
-    
+</html>
